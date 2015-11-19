@@ -1,0 +1,27 @@
+{
+  "name": "primertm",
+  "description": "Uses nearest neighbor thermodynamic calculations for primer Tm",
+  "version": "0.1.1",
+  "homepage": "https://github.com/dohalloran/primertmcalc",
+  "author": {
+    "name": "dohalloran",
+    "email": "damienoh@gwu.edu"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/dohalloran/primertmcalc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dohalloran/primertmcalc/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/dohalloran/primertmcalc/LICENSE"
+    }
+  ],
+  "main": "primertmcalc.js",
+  "dependencies": {},
+  "keywords": ["oligo","primertm","biojs"],
+  "license": "MIT"
+}
