@@ -1,6 +1,6 @@
 # primerTmCalc
 
-[![NPM version](http://img.shields.io/npm/v/primertmcalc.svg)](https://www.npmjs.org/package/primertmcalc) 
+[![NPM version](http://img.shields.io/npm/v/primertmcalc.svg)](https://www.npmjs.org/package/primertm) 
 
 > Uses nearest neighbor thermodynamic calculations for primer Tm
 
