@@ -157,8 +157,10 @@ function gcPercent(oligo) {
 
 if (primer.length > 36) {
     console.log(calcTmLong(primer)+"degC");
-} else {
+} else if (primer.length <= 36 && primer.length >=10) {
     console.log(calcTm(primer)+"degC");
+} else {
+    console.log("primer must be at least 10bps");
 }
 
 module.exports = calcTmLong;

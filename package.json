@@ -1,7 +1,7 @@
 {
   "name": "primertmcalc",
   "description": "Uses nearest neighbor thermodynamic calculations for primer Tm",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "homepage": "https://github.com/dohalloran/primertmcalc",
   "author": {
     "name": "dohalloran",
