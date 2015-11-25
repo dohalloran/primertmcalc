@@ -9,7 +9,7 @@ Install the module with: `npm install primertmcalc`
 
 ## Documentation
 collects primer from commandline  
-must be at >= 10bps
+must be >= 10bps
 
 ## Contributing
 
