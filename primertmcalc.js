@@ -103,9 +103,7 @@ var nn_h = {
     'nn': '80'
 }
 
-//var primer = "GCGGATCGCGCGATCGAGCAGCGCT";
 
-var primer = process.argv[2];
 
 //Calculate Tm of Primer if >36bps
 function calcTmLong(dna) {
@@ -115,7 +113,7 @@ function calcTmLong(dna) {
 }
 
 //Calculate Tm of Primer if <=36bps
-function calcTm(oligo) {
+function calcTmShort(oligo) {
     var dH = 0;
     var dS = 108;
     var i;
@@ -155,13 +153,31 @@ function gcPercent(oligo) {
     return number.toFixed(2);
 }
 
-if (primer.length > 36) {
-    console.log(calcTmLong(primer)+"degC");
-} else if (primer.length <= 36 && primer.length >=10) {
-    console.log(calcTm(primer)+"degC");
-} else {
-    console.log("primer must be at least 10bps");
+
+
+function calcTm(primer) {
+    if (primer.length > 36) {
+        return calcTmLong(primer)
+    } else if (primer.length <= 36 && primer.length >=10) {
+        return calcTmShort(primer)
+    } else {
+        return null
+    }
 }
 
-module.exports = calcTmLong;
+
+// var primer = "GCGGATCGCGCGATCGAGCAGCGCT";
+
+var primer = process.argv[2];
+if (primer) {
+    var returnTm = calcTm(primer)
+    if (returnTm) {
+        console.log(returnTm+"degC");
+    } else {
+        console.log("primer must be at least 10bps");
+    }
+}
+
+calcTm.calcTmShort = calcTmShort
+calcTm.calcTmLong = calcTmLong
 module.exports = calcTm;
